@@ -120,7 +120,7 @@ public class Segreteria {
 	private boolean esisteDocente(Universita u, Docente d) {
 		boolean token = false;
 		for (Docente doc : u.getDocenti()) {
-			if (doc.equals(d)) {
+			if (d.getCodFisc().equals(doc.getCodFisc())) {
 				token = true;
 				break;
 			}
@@ -163,7 +163,7 @@ public class Segreteria {
 	private boolean esisteStudente(Universita u, Studente st) {
 		boolean token = false;
 		for (Studente s : u.getStudenti()) {
-			if (s.equals(st)) {
+			if (s.getMatricola().equals(st.getMatricola())) {
 				token = true;
 				break;
 			}
